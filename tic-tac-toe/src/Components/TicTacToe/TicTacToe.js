@@ -25,6 +25,20 @@ export default function TicTacToe() {
     box8ref,
     box9ref,
   ];
+
+  function toggle(e, index) {
+    if (lock) {
+      return;
+    } else if (count % 2 === 0) {
+      e.target.innerHTML = `<img  src='${crossIcon}' alt="x"/>`;
+      data[index] = "x";
+      setCount(count + 1);
+    } else if (count % 2 === 1) {
+      e.target.innerHTML = `<img  src='${circleIcon}' alt="x"/>`;
+      data[index] = "o";
+      setCount(count + 1);
+    }
+  }
   return (
     <div className="container">
       <h1 className="title">
