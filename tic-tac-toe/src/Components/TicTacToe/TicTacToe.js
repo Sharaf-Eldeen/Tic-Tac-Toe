@@ -1,6 +1,9 @@
 import "./TicTacToe.css";
+import { useState } from "react";
 
 export default function TicTacToe() {
+  const [count, setCount] = useState(0);
+  const [lock, setLock] = useState(false);
   return (
     <div className="container">
       <h1 className="title">
